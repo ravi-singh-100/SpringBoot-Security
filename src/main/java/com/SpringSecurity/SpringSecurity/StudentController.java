@@ -4,6 +4,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -18,12 +19,20 @@ public class StudentController {
         System.out.println(user1);
         return "Devloper";
     }
-    @GetMapping("/getTester")
+    @GetMapping("/tester")
     public String getTester(){
         return "Tester";
     }
-    @GetMapping("/getDevops")
+    @GetMapping("/devops")
     public String devOps(){
         return "devOps";
+    }
+    @PostMapping("/devloper")
+    public String postDevloper(){
+        return "In Post Devloper";
+    }
+    @PostMapping("/sre")
+    public String sre(){
+        return "sre";
     }
 }
